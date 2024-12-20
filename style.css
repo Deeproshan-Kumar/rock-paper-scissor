@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --background: #2d3436;
+  --white: #ffffff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  background: var(--background);
+  color: var(--white);
+}
+
+.gameplay {
+  padding: 2rem;
+}
+
+.gameplay h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.rock-paper-scissor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.rock-paper-scissor button {
+  border: 0.2rem solid var(--background);
+  outline: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.rock-paper-scissor button:focus {
+  border: 0.2rem solid var(--white);
+}
+
+.rock-paper-scissor button img {
+  max-width: 18rem;
+  height: 18rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.result .choice {
+  max-width: 18rem;
+  width: 100%;
+}
+
+.result .choice .info {
+  min-height: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.result .choice .info span {
+  display: block;
+  text-transform: capitalize;
+}
+
+.result .choice .info span:first-child {
+  font-style: italic;
+}
+
+.score {
+  width: 100%;
+  padding: 0 1rem;
+  background: #ffffff30;
+  border-radius: 0.4rem;
+}
+
+.score:empty {
+  display: none;
+}
+
+.toast {
+  font-weight: 500;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .gameplay h1 {
+    font-size: 2.8rem;
+  }
+
+  .rock-paper-scissor button img {
+    max-width: 12rem;
+    height: 12rem;
+  }
+
+  .result .choice {
+    max-width: 12rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .rock-paper-scissor button img {
+    max-width: 10rem;
+    height: 10rem;
+  }
+
+  .result .choice {
+    max-width: 10rem;
+  }
+}
